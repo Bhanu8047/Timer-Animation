@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font: 100% "Montserrat Light", serif;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+body{
+    height: inherit;
+    width: inherit;
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+
+    background-image: linear-gradient(to top, #30cfd0 10%, #330867 100%);
+    color: #ffffff;
+}
+h1{
+    padding: 24px 24px;
+}
+.outbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: inherit;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: 10px inset rgba(1,1,1,0.2);
+    width: 240px;
+    height: 240px;
+    border-radius: 100%;
+    margin-top: 150px;
+
+/*    animation*/
+}
+.svg{
+    position: relative;
+    top: -260px;
+    width: 260px;
+    height: 260px;
+}
+.cls{
+    fill:none;
+    stroke:#000;
+    stroke-linecap: round;
+    stroke-miterlimit:10;
+    stroke-width:10px;
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+    transform: rotate(270deg);
+    transform-origin: 50% 50%;
+
+}
+.run-anim{
+    -webkit-animation-name: dash;
+    -moz-animation-name: dash;
+    -o-animation-name: dash;
+    animation-name: dash;
+    animation-duration: 0s;
+    animation-play-state: paused;
+    animation-fill-mode: none;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+@keyframes dash {
+    0%{
+        stroke: #84ffc7;
+        stroke-dashoffset: 800;
+    }
+    100%{
+        stroke: #84ffc7;
+        stroke-dashoffset: 0;
+    }
+}
+
+.control{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    margin-top: -200px;
+}
+.time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    width: 300px;
+    height: auto;
+}
+#sec, #min{
+    all: unset;
+    width: 100px;
+    height: 50px;
+    background: rgba(1,1,1,0.2);
+    border-radius: 25px;
+    font-size: 18pt;
+    text-align: center;
+    color: white;
+}
+.action{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    width: 300px;
+    height: auto;
+}
+#start, #reset{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #acdc51;
+    color: #330867;
+    font-weight: bolder;
+}
+#start:hover, #reset:hover{
+    animation: ani 0.3s ease-out forwards ;
+}
+@keyframes ani {
+    0%{
+        transform: scale(1,1);
+    }
+    100%{
+        transform: scale(0.9,0.9);
+    }
+}

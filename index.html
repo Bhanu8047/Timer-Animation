@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="flex-container">
+        <h1>Timer Animation</h1>
+
+        <div class="outbox">
+        </div>
+        <!--  SVG AREA -->
+        <svg class="svg">
+            <circle id="cls" class="cls run-anim" cx="130" cy="130" r="125"></circle>
+        </svg>
+        <!--  SVG AREA END -->
+        <div class="control">
+            <div class="time">
+                <label for="min">
+                    Min
+                    <input id="min" type="number" min="0" max="59" placeholder="mm" value="0" />
+                </label>
+                <label for="sec">
+                    Sec
+                    <input id="sec" type="number" min="0" max="59" placeholder="ss" value="0" />
+                </label>
+            </div>
+            <div class="action">
+                <button id="start" class="">
+                    Start
+                </button>
+<!--                <button id="reset" class="">-->
+<!--                    Stop-->
+<!--                </button>-->
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>
